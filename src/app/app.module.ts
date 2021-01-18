@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ListResultComponent } from './list-result/list-result.component';
 import { DetailComponent } from './detail/detail.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 //external
 import { SliderCarouselModule } from 'slider-carousel';
@@ -22,7 +23,8 @@ import { ProductsService } from './service/products.service';
     AppComponent,
     SearchComponent,
     ListResultComponent,
-    DetailComponent
+    DetailComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

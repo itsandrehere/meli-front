@@ -25,7 +25,7 @@ export class ProductsService {
   }
   
   setCategories(categories) {
-    let arrayCategories = categories.values[0].path_from_root.map(element => element.name)
+    let arrayCategories = categories.length != 0 ? categories.values[0].path_from_root.map(element => element.name) : '';
     this.categoriesSubj$.next(arrayCategories);
   }
 

@@ -11,9 +11,9 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./list-result.component.scss']
 })
 export class ListResultComponent implements OnInit {
-  test: any
+  loading: boolean = false;
   query: string; 
-  result = null;
+  items = null;
   categories = null;
   subscription: Subscription;
 
@@ -32,23 +32,26 @@ export class ListResultComponent implements OnInit {
 
   getData() {
     this.query === '' ? this.query = 'undefined' : null;
-      this.spinner.show();
-      this.product.getProducts(this.query)
-      .subscribe((res: any) => {
-        this.result = this.setResults(res);
-        this.createCategories(res);
+    this.spinner.show();
+    this.loading = true;
+    this.product.getProducts(this.query)
+    .subscribe((res: any) => {
+      this.items = this.setResults(res);
+      this.createCategories(res);
+      this.spinner.hide();
+      this.loading = false;
+    },
+      err => {
+        this.loading = false;
         this.spinner.hide();
-      },
-        err => {
-          if (err.status === 404) {
-            this.spinner.hide();
-            this.toastr.error('Ha ocurrido un problema conectando al servidor', 'Intentelo más tarde');
-          }
-        });
+        if (err.status === 404) {
+          this.toastr.error('Ha ocurrido un problema conectando al servidor', 'Intentelo más tarde');
+        }
+      });
   }
 
   createCategories(result) {
-    result.filters.length ? this.product.setCategories(result.filters[0]) : null;
+    result.filters.length ? this.product.setCategories(result.filters[0]) : this.product.setCategories([]);
   }
 
   setResults(result) {
