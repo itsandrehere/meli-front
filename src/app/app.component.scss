@@ -1,6 +1,8 @@
+@import '../styles.scss';
+
 .body{
   min-height: calc(100vh - 58px);
   display: flex;
   flex-direction: column;
-  background-color: #eeeeee;
+  background-color:$silver;
 }
