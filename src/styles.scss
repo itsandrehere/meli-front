@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+/*  colors  */
+$yellow: #FFE600;
+$blue: #3483FA;
+@import '~ngx-toastr/toastr';
+@import '~slider-carousel/slider-carousel.scss';
+@include slider-carousel($blue);
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.slider-carousel > section .image-controller{
+  box-shadow: none;
+}
+
+.slider-carousel > section .footer-images{
+  background: none;
+}

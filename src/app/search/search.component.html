@@ -1,0 +1,8 @@
+<div class="search__bar">
+  <img [routerLink]="['/']" class="__logo" src="assets/images/logo__.png" alt="Logo Mercado Libre" />
+  <div class="search__input">
+    <input type="text" name="search" [formControl]="search" placeholder="Nunca dejes de buscar"
+    aria-label="busca en Mercado Libre" (keydown.enter)="sendMessage()">
+    <button (click)="sendMessage()"><img src="assets/images/search@.png" alt="search" /></button>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+@import '../../styles.scss';
+
+.pdp-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: auto;
+  max-width: 1280px;
+  width: 100%;
+  padding-top: 2%;
+  background-color: #fff;
+  padding: 3%;
+
+  &__body{
+
+    &-img{
+      width: 100%;
+    }
+
+    &-title{
+      font-size: 24px;
+      font-weight: 400;
+      padding-bottom: 24px;
+    }
+
+    &-description{
+      color: #666;
+      font-size: 20px;
+    }
+  }
+
+  &__header{
+    &-subtitle{
+      color: rgba(0,0,0,.45);
+      font-size: 14px;
+      font-weight: 400;
+      vertical-align: 3px;
+      white-space: pre-wrap;
+      margin: 5% 0;
+    }
+
+    &-title{
+      color: rgba(0,0,0,.8);
+      font-size: 22px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      line-height: 1.18;
+    }
+    &-price{
+      font-size: 35px;
+      font-weight: 300;
+      line-height: 1em;
+      margin-top: 5%;
+      display: inline-flex;
+    }
+    &-btn{
+      background-color: #3483FA;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 48px;
+      width: 100%;
+      color: #fff;
+    }
+  }
+}

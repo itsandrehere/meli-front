@@ -1,0 +1,25 @@
+<div class="pdp-container">
+  <div class="container">
+    <div class="row">
+      <div class="pdp-container__body col-sm-7">
+        <slider-carousel [images]="details.pictures"></slider-carousel>
+        <hr>
+        <h3 class="pdp-container__body-title">Descripción del producto</h3>
+        <div class="pdp-container__body-description">{{ details.description}} </div>
+
+      </div>
+      <div class="pdp-container__header col-sm-5">
+        <div class="pdp-container__header-subtitle"> {{ details.condicion }} | {{ details.quantitySold }} vendidos</div>
+        <h1 class="pdp-container__header-title"> {{ details.title }}</h1>
+        <div class="pdp-container__header-price">
+          <span *ngIf="details.price.currency == 'ARS'"> $ </span>
+          <span *ngIf="details.price.currency != 'ARS'"> U$S </span>
+          <h2 class="pdp-container__header-price__base">{{ details.price.amount | number }}</h2>
+        </div>
+        <button class="pdp-container__header-btn btn">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" color="#FFE600"></ngx-spinner>

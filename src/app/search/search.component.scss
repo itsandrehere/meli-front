@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+.search {
+
+  &__bar {
+    background-color: $yellow;
+    width           : 100%;
+    display         : flex;
+    justify-content: center;
+    align-items: center;
+    padding         : 0.5% 0;
+
+    .__logo {
+      height: 35px;
+      margin-right: 2%;
+      outline: none;
+    }
+  }
+
+
+  &__input {
+    display: flex;
+    width: 50%;
+    padding: 4px;
+    border-radius: 4px;
+    background: #fff;
+
+    input {
+      width: 100%;
+      background: none;
+      border: 0;
+      padding: 6px 6px 6px 20px;
+      outline: none;
+      font-size: 0.9em;
+    }
+
+    button {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: transparent;
+      border-left: 1px solid #eee;
+      padding-left: 1.5%;
+
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
