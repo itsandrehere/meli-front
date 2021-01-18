@@ -2,6 +2,11 @@
 /*  colors  */
 $yellow: #FFE600;
 $blue: #3483FA;
+$silver: #eeeeee;
+$gray: #666666;
+$dark-gray: #333333;
+$white: #ffffff;
+
 @import '~ngx-toastr/toastr';
 @import '~slider-carousel/slider-carousel.scss';
 @include slider-carousel($blue);

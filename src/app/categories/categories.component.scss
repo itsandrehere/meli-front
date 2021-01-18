@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 .pdp-breadcrumb{
-  background-color: #eeeeee;
+  background-color: $silver;
 
   &__container{
     margin: auto;
@@ -10,6 +12,6 @@
 
   &__link{
     font-size: 13px;
-    color: #666;
+    color: $gray;
   }
 }
