@@ -8,6 +8,9 @@ const app = express();
 
 const apiUrl = "https://api.mercadolibre.com/";
 
+
+// Use the body parser middleware to allow 
+// express to recognize JSON requests
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -16,7 +19,7 @@ app.get('/items', (req, response) => {
   fetch(`${apiUrl}sites/MLA/search?q=${query}`)
     .then(res => res.json())
     .then(json => {response.send(json)})
-    .catch(err => console.error(err));
+    .catch(err => response.status(400).send(err));
 })
 
 app.get('/items/:id', (req, response) => {
@@ -35,8 +38,9 @@ app.get('/items/:id', (req, response) => {
       description: data[1]
     });
   }).catch(function (error) {
-    console.error(error)
+    response.status(400).send(err)
   });
+
 })
 
 app.get('/', (req, res) => {
