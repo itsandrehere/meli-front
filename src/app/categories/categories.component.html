@@ -1,0 +1,12 @@
+<div class="pdp-breadcrumb">
+  <div class="pdp-breadcrumb__container">
+    <ng-container *ngIf="categories">
+      <span class="pdp-breadcrumb__link" *ngFor="let category of categories">
+        {{category}} 
+        <span>
+          >
+        </span>
+      </span>
+    </ng-container>
+  </div>
+</div>

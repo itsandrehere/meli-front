@@ -1,0 +1,15 @@
+.pdp-breadcrumb{
+  background-color: #eeeeee;
+
+  &__container{
+    margin: auto;
+    max-width: 1280px;
+    width: 100%;
+    padding: 1%;
+  }
+
+  &__link{
+    font-size: 13px;
+    color: #666;
+  }
+}
